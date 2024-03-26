@@ -1,0 +1,142 @@
+* {
+    font-family: 'Consolas';
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.sidebar {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    max-width: fit-content;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 5px black;
+    color: black;
+    padding: 0 20px 0 20px;
+
+    & p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+    }
+
+    & .container {
+        padding: 10px 0 10px 0;
+
+        & li {
+            font-size: 1.2rem;
+            font-weight: 100;
+            margin: 0 0 10px 0;
+            padding: 10px 30px 10px 10px;
+            border-radius: 10px;
+            list-style: none;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                color: white;
+                background-color: rgb(0, 89, 255);
+            }
+        }
+
+    }
+}
+
+.main {
+    display: flex;
+    margin-left: 250px;
+}
+@media screen and (max-width: 768px) and (min-width: 426px){
+    .sidebar {
+        max-width: fit-content;
+        transition: all 1s;
+        padding: 0 5px 0 5px;
+
+        & p {
+            font-size: 1.3rem;
+        }
+        & .container {
+            margin-top: 0;
+
+            & li{
+                border-radius: 0;
+                padding: 5px;
+                font-size: 1rem;
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 376px){
+    .sidebar {
+        max-width: fit-content;
+        transition: all 1s;
+        padding: 0;
+
+        & p {
+            font-size: 1.3rem;
+        }
+        & .container {
+            margin-top: 0;
+
+            & li{
+                border-radius: 0;
+                padding: 5px;
+                font-size: 1rem;
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 375px) and (min-width: 321px){
+    .sidebar {
+        max-width: fit-content;
+        transition: all 1s;
+        padding: 0;
+
+        & p {
+            font-size: 1.1rem;
+        }
+
+        & .container {
+            margin-top: 0;
+
+            & li{
+                border-radius: 0;
+                padding: 5px;
+                font-size: .8rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    .sidebar {
+        max-width: fit-content;
+        transition: all 1s;
+        padding: 0;
+
+        & p {
+            font-size: .9rem;
+        }
+
+        && .container {
+            margin-top: 0;
+
+            & li{
+                border-radius: 0;
+                padding: 5px;
+                font-size: .5rem;
+            }
+        }
+    }
+}
